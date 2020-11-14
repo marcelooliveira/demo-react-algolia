@@ -10,8 +10,8 @@ const fetcher = (url) => fetch(url).then((r) => r.json());
 
 const Home = () => {
   const { data, error } = useSWR('/api/houses', fetcher);
-  
-  if (error) return <div>failed to load</div>;
+
+  if (error) return (<div>failed to load</div>)
 
   return (
     <div className="component-container p-4">

@@ -16,6 +16,7 @@ export default async (req, res) => {
         })
         // query the refs
         return client.query(getAllDataQuery).then((data) => {
+
             res.status(200).json(data);
         })
     })
